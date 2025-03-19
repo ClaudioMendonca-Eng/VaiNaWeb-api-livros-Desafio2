@@ -18,8 +18,16 @@ init_db()
 
 @app.route('/')
 
-def home_page():
-    return '<h2>API funcionando!</h2>'
+def home_page():  
+    return """
+    <h1>API de Livros</h1>
+    <p>Essa é a documentação da API de livros</p>
+    <h2>Rotas</h2>
+    <ul>
+        <li>POST /doar</li>
+        <li>GET /livros</li>
+    </ul>
+    """
 
 @app.route('/doar', methods=['POST'])
 def doar_livro():
