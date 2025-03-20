@@ -86,10 +86,11 @@ A API estará rodando em `http://127.0.0.1:5000/`.
 ```
 
 
-### 📌 A documentação da API foi feita utilizando o [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/) e está disponível no link abaixo:
+### [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/) A documentação da API foi feita utilizando o Postman e está disponível no link abaixo:
 
 - [Documentação da API](https://documenter.getpostman.com/view/19942731/2sAYkBs1ag)
-- [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2sAYkBs1ag)
+
+
 ---
 
 ## 📌 <a name="observações"> Observações </a>
