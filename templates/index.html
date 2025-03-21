@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API - API LIVROS</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1, h2, h3 { color: #333; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+        code { font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Documentação da API LIVROS</h1>
+    <p>Este documento descreve as rotas e funcionalidades da API para gerenciamento de livros.</p>
+    
+    <h2>Endpoints</h2>
+    
+    <h3>Home</h3>
+    <p><strong>Método:</strong> GET</p>
+    <p><strong>Rota:</strong> <code>/</code></p>
+    <p><strong>Descrição:</strong> Retorna a página inicial da API.</p>
+    
+    <h3>Cadastrar Livro</h3>
+    <p><strong>Método:</strong> POST</p>
+    <p><strong>Rota:</strong> <code>/doar</code></p>
+    <p><strong>Descrição:</strong> Endpoint para cadastrar um novo livro.</p>
+    <p><strong>Corpo da Requisição (JSON):</strong></p>
+    <pre>
+{
+    "titulo": "Nome do Livro",
+    "categoria": "Categoria do Livro",
+    "autor": "Autor do Livro",
+    "imagem_url": "URL da imagem"
+}
+    </pre>
+    
+    <h3>Listar Livros</h3>
+    <p><strong>Método:</strong> GET</p>
+    <p><strong>Rota:</strong> <code>/livros</code></p>
+    <p><strong>Descrição:</strong> Endpoint para listar todos os livros cadastrados.</p>
+    
+    <h2>Tecnologias Utilizadas</h2>
+    <ul>
+        <li>Flask</li>
+        <li>SQLite</li>
+        <li>JSON</li>
+    </ul>
+    
+    <h2>Links Úteis</h2>
+    <ul>
+        <li>Repositório: <a href="https://github.com/ClaudioMendonca-Eng/VaiNaWeb-api-livros-Desafio2" target="_blank">GitHub</a></li>
+        <li>Documentação do Postman: <a href="https://documenter.getpostman.com/view/19942731/2sAYkBs1ag" target="_blank">Postman</a></li>
+    </ul>
+</body>
+</html>
