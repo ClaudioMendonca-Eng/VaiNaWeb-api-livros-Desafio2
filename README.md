@@ -56,11 +56,12 @@ A API estará rodando em `http://127.0.0.1:5000/`.
 
 ## 📤 Endpoints da API
 
-| Método | Rota      | Descrição |
-|--------|----------|-----------|
-| GET    | `/`      | Página inicial da API |
-| POST   | `/doar`  | Cadastrar um novo livro |
-| GET    | `/livros` | Listar todos os livros |
+| Método | Rota                           | Descrição                         |
+|--------|-------------------------------|-----------------------------------|
+| GET    | `/`                           | Página inicial da API             |
+| GET    | `/livros`                     | Listar todos os livros            |
+| POST   | `/doar`                      | Cadastrar um novo livro           |
+| DELETE | `/livros/<int:livro_id>`      | Deletar um livro pelo ID          |
 
 ### 📌 Exemplo de Requisição `POST /doar`
 ```json
