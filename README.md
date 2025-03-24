@@ -5,9 +5,11 @@ Este projeto é um desafio do módulo avançado de Back-end do curso **Vai Na We
 
 ## 🚀 Funcionalidades
 
+- 📌 **Página inicial**: Acessar a rota `/` para verificar se a API está funcionando.
 - 📌 **Cadastrar um livro**: Enviar uma requisição `POST` para `/doar` para adicionar um novo livro ao banco de dados.
 - 📌 **Listar todos os livros**: Fazer uma requisição `GET` para `/livros` para obter todos os livros cadastrados.
-- 📌 **Página inicial**: Acessar a rota `/` para verificar se a API está funcionando.
+- 📌 **Deletar um livro**: Enviar uma requisição `DELETE` para `/livros/<id>` para remover um livro existente.
+
 
 ## ⚙️ Tecnologias Utilizadas
 
@@ -18,11 +20,13 @@ Este projeto é um desafio do módulo avançado de Back-end do curso **Vai Na We
 ## 📂 Estrutura do Projeto
 
 ```
-📂 api-livros
-├── 📄 app.py             # Código principal da API
-├── 📄 database.db        # Banco de dados SQLite
-├── 📄 requirements.txt   # Dependências do projeto
-└── 📄 README.md          # Documentação do projeto
+VaiNaWeb-api-livros-Desafio2
+├── templates
+│   └── index.html       # Template da página inicial da API
+├── app.py               # Código principal da API
+├── database.db          # Banco de dados SQLite
+├── requirements.txt     # Dependências do projeto
+└── README.md            # Documentação do projeto
 ```
 
 ## 📥 Instalação e Execução
@@ -56,12 +60,11 @@ A API estará rodando em `http://127.0.0.1:5000/`.
 
 ## 📤 Endpoints da API
 
-| Método | Rota                           | Descrição                         |
-|--------|-------------------------------|-----------------------------------|
-| GET    | `/`                           | Página inicial da API             |
-| GET    | `/livros`                     | Listar todos os livros            |
-| POST   | `/doar`                      | Cadastrar um novo livro           |
-| DELETE | `/livros/<int:livro_id>`      | Deletar um livro pelo ID          |
+| Método | Rota      | Descrição |
+|--------|----------|-----------|
+| GET    | `/`      | Página inicial da API |
+| GET    | `/livros` | Listar todos os livros |
+| POST   | `/doar`  | Cadastrar um novo livro |
 
 ### 📌 Exemplo de Requisição `POST /doar`
 ```json
