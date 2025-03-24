@@ -20,13 +20,13 @@ Este projeto é um desafio do módulo avançado de Back-end do curso **Vai Na We
 ## 📂 Estrutura do Projeto
 
 ```
-VaiNaWeb-api-livros-Desafio2
-├── templates
-│   └── index.html       # Template da página inicial da API
-├── app.py               # Código principal da API
-├── database.db          # Banco de dados SQLite
-├── requirements.txt     # Dependências do projeto
-└── README.md            # Documentação do projeto
+📂 VaiNaWeb-api-livros-Desafio2
+├── 📂templates
+│   └── 📄 index.html       # Template da página inicial da API
+├── 📄 app.py               # Código principal da API
+├── 📄 database.db          # Banco de dados SQLite
+├── 📄 requirements.txt     # Dependências do projeto
+└── 📄 README.md            # Documentação do projeto
 ```
 
 ## 📥 Instalação e Execução
