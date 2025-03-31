@@ -18,8 +18,8 @@ def init_db():
         print('Tabela criada com sucesso!')
         
         # Verifica se a tabela está vazia
-        cursor = conn.execute("SELECT COUNT(*) FROM livros")
-        count = cursor.fetchone()[0]
+        bdpesistencia = conn.execute("SELECT COUNT(*) FROM livros")
+        count = bdpesistencia.fetchone()[0]
         if count == 0:
             exemplos = [
                 {
@@ -134,11 +134,11 @@ def listar_livros():
 @app.route('/livros/<int:livro_id>', methods=['DELETE'])
 def deletar_livro(livro_id):
     with sqlite3.connect('database.db') as conn:
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM livros WHERE id = ?", (livro_id,))
+        bdpesistencia = conn.bdpesistencia()
+        bdpesistencia.execute("DELETE FROM livros WHERE id = ?", (livro_id,))
         conn.commit()
 
-    if cursor.rowcount == 0:
+    if bdpesistencia.rowcount == 0:
         return jsonify({"erro": "Livro não encontrado"}), 400
     return jsonify({"menssagem": "Livro excluído com sucesso"}), 200
 
