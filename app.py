@@ -16,6 +16,78 @@ def init_db():
                      imagem_url TEXT NOT NULL
                      )""")
         print('Tabela criada com sucesso!')
+        
+        # Verifica se a tabela está vazia
+        cursor = conn.execute("SELECT COUNT(*) FROM livros")
+        count = cursor.fetchone()[0]
+        if count == 0:
+            exemplos = [
+                {
+                    "titulo": "O Pequeno Príncipe",
+                    "categoria": "Ficção",
+                    "autor": "Antoine de Saint-Exupéry",
+                    "imagem_url": "https://m.media-amazon.com/images/I/81TmOZIXvzL._SY466_.jpg"
+                },
+                {
+                    "titulo": "1984",
+                    "categoria": "Distopia",
+                    "autor": "George Orwell",
+                    "imagem_url": "https://m.media-amazon.com/images/I/51VXYaKO-sL._SY445_SX342_.jpg"
+                },
+                {
+                    "titulo": "Dom Casmurro",
+                    "categoria": "Romance",
+                    "autor": "Machado de Assis",
+                    "imagem_url": "https://m.media-amazon.com/images/I/A1C0FSwUY8L._SY466_.jpg"
+                },
+                {
+                    "titulo": "A Revolução dos Bichos",
+                    "categoria": "Fábula",
+                    "autor": "George Orwell",
+                    "imagem_url": "https://m.media-amazon.com/images/I/61owA5ey3iL._SY445_SX342_.jpg"
+                },
+                {
+                    "titulo": "Cem Anos de Solidão",
+                    "categoria": "Realismo Mágico",
+                    "autor": "Gabriel García Márquez",
+                    "imagem_url": "https://m.media-amazon.com/images/I/511NRhFHZbL._SY445_SX342_.jpg"
+                },
+                {
+                    "titulo": "O Alquimista",
+                    "categoria": "Ficção",
+                    "autor": "Paulo Coelho",
+                    "imagem_url": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg"
+                },
+                {
+                    "titulo": "Moby Dick",
+                    "categoria": "Aventura",
+                    "autor": "Herman Melville",
+                    "imagem_url": "https://m.media-amazon.com/images/I/A1xWjc50fmL._SL1500_.jpg"
+                },
+                {
+                    "titulo": "O Hobbit",
+                    "categoria": "Fantasia",
+                    "autor": "J.R.R. Tolkien",
+                    "imagem_url": "https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg"
+                },
+                {
+                    "titulo": "Hamlet",
+                    "categoria": "Teatro",
+                    "autor": "William Shakespeare",
+                    "imagem_url": "https://m.media-amazon.com/images/I/41utozT3RWL._SY445_SX342_.jpg"
+                },
+                {
+                    "titulo": "Ensaio sobre a Cegueira",
+                    "categoria": "Distópico",
+                    "autor": "José Saramago",
+                    "imagem_url": "https://m.media-amazon.com/images/I/41iQySvQq0L._SY445_SX342_.jpg"
+                }
+            ]
+            for livro in exemplos:
+                conn.execute('INSERT INTO livros (titulo, categoria, autor, imagem_url) VALUES (?, ?, ?, ?)',
+                             (livro["titulo"], livro["categoria"], livro["autor"], livro["imagem_url"]))
+            conn.commit()
+            print('Livros de exemplo adicionados com sucesso!')
 
 init_db()
 
