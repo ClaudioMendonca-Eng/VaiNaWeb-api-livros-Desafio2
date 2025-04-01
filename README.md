@@ -56,7 +56,14 @@ pip install -r requirements.txt
 python app.py
 ```
 
-A API estará rodando em `http://127.0.0.1:5000/`.
+A API estará rodando em `http://127.0.0.1:5000/`.  
+Após a implantação, a API estará disponível em:  
+https://vainaweb-api-livros.onrender.com/
+
+> **Persistência de Dados:**  
+> Ao iniciar a aplicação, a função de inicialização do banco de dados verifica se a tabela de livros está vazia. Se estiver, alguns livros de exemplo são automaticamente inseridos, garantindo que a API sempre tenha dados para exibir.
+> **Banco de Dados:**
+> O banco de dados SQLite é criado automaticamente na primeira execução da aplicação. Ele armazena os livros cadastrados e é atualizado conforme novas doações são feitas ou livros são deletados.
 
 ## 📤 Endpoints da API
  
